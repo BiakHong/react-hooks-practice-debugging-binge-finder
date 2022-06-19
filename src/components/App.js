@@ -13,8 +13,8 @@ function App() {
   const [filterByRating, setFilterByRating] = useState("");
 
   useEffect(() => {
-    Adapter.getShows().then((shows) => setShows(shows));
-  }, []);
+    Adapter.getShows().then((shows) => setShows(shows))
+  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,7 +40,7 @@ function App() {
   let displayShows = shows;
   if (filterByRating) {
     displayShows = displayShows.filter((s) => {
-      s.rating.average >= filterByRating;
+      return s.rating.average >= filterByRating;
     });
   }
 

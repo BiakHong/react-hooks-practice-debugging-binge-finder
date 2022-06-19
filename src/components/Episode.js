@@ -1,7 +1,7 @@
 import React from "react";
 
-function Episode(props) {
-  let { myEpisode } = props;
+function Episode({eachEpisode}) {
+  let { myEpisode } = eachEpisode;
 
   return (
     <div>
